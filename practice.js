@@ -1,10 +1,4 @@
-/* 
-  Once you complete a problem, refresh ./SpecRunner.html in your browser and check to see if the problem's test(s) are passing.
-  Passed tests will be indicated by a green circle.
-  Failed tests will be indicated by a red X.
 
-  You can refresh the page at any time to re-run all the tests.
-*/
 
 ////////// PROBLEM 1 //////////
 
@@ -17,7 +11,10 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first(arr) {
+
+  return arr[0]
+}
 
 
 
@@ -32,7 +29,10 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last (arr) {
+
+  return arr[2]
+}
 
 
 
@@ -47,7 +47,15 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family) {
+  
+
+  for ( let i =  0; i < family.length ; i++) {
+    alert(family[i])
+  }
+  }
+
+
 
 
 
@@ -62,7 +70,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop backwards, starting at the end of the letters array, alerting every item in the array.
 */
 
-//Code Here
+function reversedLooper(letters) {
+
+  for (let q = letters.length -1 ; q >= 0 ; q-- ) {
+    alert(letters[q])
+
+  }
+}
 
 
 
@@ -77,7 +91,18 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
+function evenFinder(nums) {
+
+  let newAr = []
+  for (let z = 0 ; z < nums.length ; z++ ) 
+    if ( nums[z] % 2 === 0) {
+    
+      newAr.push(nums[z])
+
+  }
+return newAr
+
+}
 
 
 
@@ -106,7 +131,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(numbersArray) {
+for (let i = 0; i < numbersArray.length ; i++ )
+{
+  if (numbersArray[i] % 2 === 0) {
+    numbersArray.unshift(i)
+  }
+  for( let j = 0; j < numbersArray.length ; j++ ) {
+    if( numbersArray[j] % 1 === 0) {
+      numbersArray.push([j])
+    }
+  }
+return numbersArray
+}
+
+}
 
 
 
